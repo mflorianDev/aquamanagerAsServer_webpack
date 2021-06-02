@@ -1,0 +1,28 @@
+{
+    "tanks": [
+        "großes Aquarium",
+        "Nano 1",
+        "Nano 2",
+        "Aufzuchtbecken"
+    ],
+    "animals": {
+        "fishes": [
+            "Perlhuhnbärbling",
+            "Feuersalmler",
+            "Ohrgitter Harnischwels",
+            "Honiggurami"
+        ],
+        "snails": [
+            "Kleine Posthornschnecke",
+            "Geweihschnecke",
+            "Zebra-Rennschnecke",
+            "Orange-Treck-Rennschnecke"
+        ],
+        "shrimps": [
+            "Red Sakura",
+            "Orange Sakura",
+            "Algengarnele",
+            "Amanogarnele"
+        ]
+    }
+}

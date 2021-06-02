@@ -1,0 +1,22 @@
+{
+    "name": "aquamanager",
+    "version": "1.0.0",
+    "description": "application to manage maintenance for multiple aquariums",
+    "main": "public/script.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "build-prod": "webpack --mode production",
+        "watch": "webpack --watch"
+    },
+    "author": "Florian Mauroner",
+    "license": "ISC",
+    "devDependencies": {
+        "mime-types": "^2.1.29",
+        "webpack": "^5.24.1",
+        "webpack-cli": "^4.5.0"
+    },
+    "dependencies": {
+        "axios": "^0.21.1"
+    }
+}

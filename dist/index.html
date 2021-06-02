@@ -1,0 +1,163 @@
+<html lang="de-AT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/public/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div>
+        <a id="linkJSON" href="./Aquariumpflege.json">Pflegeliste JSON-Datei</a>
+        <button id="saveJSON" class="button" type="button" onclick="saveJSON()">Speichere lokalstorage als
+            JSON-Datei</button>
+    </div>
+
+    <div id="importpfl">
+        <h3 class="heading">IMPORT PFLEGELISTE</h3>
+        <div class="container">
+            <button class="box-fix" class="button" type="button" onclick="txtprocessing()">Import</button>
+            <input class="box" id="textinput" type="text" name="txtpro" onchange="txtprocessing()"
+                placeholder="Copy & Paste JSON-Datei">
+        </div>
+    </div>
+
+
+    <div id="database">
+        <h3 class="heading">DATENBANK</h3>
+        <div class="container">
+            <button class="box-fix" id="showTankButton" class="button" type="button">Auflistung Auswahl</button>
+            <select class="box" id="showTankSelect" name="Aquarium" required></select>
+        </div>
+        <ul id="output" name="Eintrag">
+        </ul>
+    </div>
+
+
+    <div id="Werteformular">
+        <form>
+
+            <h3 class="heading">AQUARIUMPFLEGE</h3>
+
+            <div class="topic">
+                <div class="containerWerte">
+                    <h3 class="boxW_1">Aquarium:</h3>
+                    <select class="boxW_2" id="aquarium" name="Aquarium" required></select>
+                </div>
+
+                <div class="containerWerte">
+                    <label class="boxW_1" for="alleAquarien">Alle Aquarien:</label>
+                    <input class="boxW_2_check" id="alleAquarien" type="checkbox" name="alleAquarien">
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="containerWerte">
+                    <h3 class="boxW_1">Datum:</h3>
+                    <input class="boxW_2" id="date" type="date" name="Datum" required>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h3>Wasserwechsel:</h3>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="Wasserwechsel [%]">Angabe in Prozent:</label>
+                    <select class="boxW_2" id="h2oPrz" name="Wasserwechsel_%" required></select>
+                </div>
+            </div>
+
+            <div class="topic">
+                <h3>Düngung:</h3>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="Düngung NPK [Tr]">NPK [Tr]:</label>
+                    <input class="boxW_2" id="düngNPKTpf" type="number" name="Düngung_NPK_Tr" min="0"
+                        placeholder="NPK Tropfen">
+                </div>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="Düngung Eisen [Tr]">Eisen [Tr]:</label>
+                    <input class="boxW_2" id="düngFeTpf" type="number" name="Düngung_Fe_Tr" min="0"
+                        placeholder="Eisen Tropfen">
+                </div>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="Düngung NPK [ml]">NPK [ml]:</label>
+                    <input class="boxW_2" id="düngNPKMil" type="number" name="Düngung_NPK_ml" min="0"
+                        placeholder="NPK Milliliter">
+                </div>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="Düngung Eisen [ml]">Eisen [ml]:</label>
+                    <input class="boxW_2" id="düngFeMil" type="number" name="Düngung_Fe_ml" min="0"
+                        placeholder="Eisen Milliliter">
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="containerWerte">
+                    <h3 class="boxW_1">Mironekuton:</h3>
+                    <input class="boxW_2_check" id="Mironekuton" type="checkbox" name="Mironekuton">
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="containerWerte">
+                    <h3 class="boxW_1">BacterAE:</h3>
+                    <input class="boxW_2_check" id="BacterAE" type="checkbox" name="BacterAE">
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="containerWerte">
+                    <h3 class="boxW_1">Catappa-X:</h3>
+                    <input class="boxW_2_check" id="Catappa-X" type="checkbox" name="Catappa-X">
+                </div>
+            </div>
+
+            <div class="topic">
+                <h3>Tiere Neu:</h3>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="Tierart">Angabe Tierart:</label>
+                    <select class="boxW_2" id="tierliste_neu" name="Besatz-Neu_Tierart" required></select>
+                </div>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="tierneu_nr">Anzahl:</label>
+                    <input class="boxW_2" id="tierneu_nr" type="number" name="Besatz-Neu_Anzahl" min="1"
+                        placeholder="Anzahl" />
+                </div>
+            </div>
+
+            <div class="topic">
+                <h3>Tiere Verstorben:</h3>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="Tierart">Angabe Tierart:</label>
+                    <select class="boxW_2" id="tierliste_verst" name="Verstorben_Tierart" required></select>
+                </div>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="tierverst_nr">Anzahl:</label>
+                    <input class="boxW_2" id="tierverst_nr" type="number" name="Verstorben_Anzahl" min="1"
+                        placeholder="Anzahl" />
+                </div>
+            </div>
+
+            <div class="topic">
+                <h3>Eier abgeworfen:</h3>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="Eiabwurf">Angabe Tierart:</label>
+                    <select class="boxW_2" id="tierliste_eiabw" name="Eiabwurf_Tierart" required></select>
+                </div>
+                <div class="containerWerte">
+                    <label class="boxW_1" for="tierliste_eipakete">Eipakete:</label>
+                    <input class="boxW_2" id="tierliste_eipakete" type="number" name="Eiabwurf_Anzahl" min="1"
+                        placeholder="Anzahl" />
+                </div>
+            </div>
+
+            <button class="button" id="sendFormButton" type="button">Speichern</button>
+
+        </form>
+    </div>
+</body>
+
+<script src="/public/main.js"></script>
+
+</html>

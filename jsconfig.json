@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "target": "es2020"
+    }
+}
+
+// Ermöglicht Autocompletion für neue Funktionen im Editor

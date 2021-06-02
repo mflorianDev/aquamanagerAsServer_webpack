@@ -1,0 +1,194 @@
+
+body{
+    margin: 8px 0px;
+}
+
+.heading{
+    margin: 10px 0px;
+}
+
+/*
+Style für JSON-Datei-Link und JSON-Speicher-Button
+*/
+
+#linkJSON{
+    display: block;
+    text-align: center;
+    margin: 12px;
+}
+
+#saveJSON{
+    display: block;
+    margin: 12px auto;
+    text-align: center;
+    padding: 6px 6px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+
+/*
+Style für Import Pflegeliste
+*/
+
+#importpfl{
+    border-radius: 10px;
+    background-color:#f2f2f2;
+    padding: 8px;
+    margin: 8px;
+}
+
+#importpfl button{
+    background-color:   #cccccc;
+    padding: 5px  8px;
+    border: 1px solid  #cccccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#importpfl input{
+    padding: 5px  8px;
+    margin: 0px 0px 0px 5px;
+}
+
+
+
+/*
+Style für Anzeige Database-Einträge
+*/
+
+#database{
+    border-radius: 10px;
+    background-color:#f2f2f2;
+    padding: 8px;
+    margin: 8px;
+}
+
+.container{
+    display: flex;
+    height: 38px;
+}
+
+.box-fix{
+    flex: 0 1 140px;
+}
+
+.box{
+    flex: 1 1 140px;
+}
+
+#database button{
+    background-color:   #cccccc;
+    padding: 5px  8px;
+    border: 1px solid  #cccccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#database select{
+    padding: 5px  8px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#database select:invalid {
+    color: gray;
+}
+
+ul#output{
+    background-color: #f2f2f2;
+    padding-left: 0px;
+}
+
+ul#output li{
+    background-color: #f2f2f2;
+    margin: 0px 0px 0px 15px;
+    border-radius: 4px;
+    padding: 7px 0px 7px 0px;
+    list-style-position: outside;
+}
+
+ul#output li:nth-child(odd){
+    background-color: #f2f2f2;
+}
+
+
+
+/*
+Style für Eingabewerte-Formular
+*/
+
+.topic{
+    margin: 15px 0px;
+}
+
+.containerWerte{
+    display: flex;
+    height: 38px;
+    margin: 7px 0px;
+}
+
+.boxW_1{
+    flex: 0 0 auto;
+    align-self: center;
+}
+
+.boxW_2{
+    flex: 1 1 0;
+    margin-left: 5px;
+}
+
+.boxW_2_check{
+    flex: 0 0 0;
+    margin-left: 15px;
+    align-self: center;
+}
+
+
+#Werteformular {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 8px;
+    margin: 8px;
+}
+
+#Werteformular select:invalid {
+    color: gray;
+}
+
+#Werteformular input[type="date"]:invalid {
+    color: gray;
+}
+
+#Werteformular select, input[type="text"], input[type="checkbox"], input[type="number"], input[type="date"]{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+
+#Werteformular h3,p,label,input{
+    display: inline;
+}
+
+
+
+
+
+#Werteformular button[type="button"] {
+    width: 100%;
+    background-color:  rgb( 170, 57, 57);
+    color: white;
+    padding: 12px 15px;
+    margin: 30px 0;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#Werteformular button[type="button"]:hover {
+    background-color:  rgb( 128, 21, 21);
+}
